@@ -93,6 +93,14 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  background-attachment: fixed;
+ /*  background-image: url('../public/variety-dark-shapes-background.jpeg');
+  background-image: url('../public/wavy-copy-space-background-close-up.jpeg'); */
+  background-image: url('../public/layers-black-torn-paper.jpeg');
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 a {

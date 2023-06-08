@@ -1,10 +1,6 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
   min-height: 100vh;
+  padding-top: 70px;
 }
 
 .description {
@@ -226,4 +222,58 @@
   to {
     transform: rotate(0deg);
   }
+}
+
+/* new styles */
+
+.nav {
+  align-items: center;
+  display: flex;
+  height: 70px;
+  justify-content: space-between;
+  padding: 12px 24px;
+  position: fixed;
+  width: 100%; 
+  z-index: 999;
+}
+
+.navBrand {
+  color: olivedrab; 
+  font-size: 2rem;
+}
+
+.navBackground {
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: background-color 0.5s ease;
+}
+
+.navLinks {
+  display: flex;
+  gap: 32px;
+}
+
+.navLinks a {
+  font-size: 1.5rem;
+  color: white !important;
+}
+
+.navLinks a:hover {
+  color: rgb(214, 196, 36);
+  cursor: pointer;
+  transition: color 0.7s ease-in-out;
+}
+
+.section {
+  background-color: white;
+  color: black;
+  margin-bottom: 20rem;
+  min-height: 25rem;
+
+}
+
+.intro {
+  color: black;
+  margin-bottom: 5rem;
+  min-height: 25rem;
+  padding: 16px 32px;
 }
