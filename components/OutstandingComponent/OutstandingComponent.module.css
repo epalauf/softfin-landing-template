@@ -32,3 +32,28 @@
     width: 5%;
 }
 
+.outstandingMobile {
+    display: none;
+}
+
+@media (min-width: 320px) and (max-width: 575px) { 
+
+    .outstandingMobile {
+        display: block;
+    }
+    .outstandingDesktop {
+        display: none;
+    }
+}
+
+ /* @media (min-width: 576px) { 
+
+    .outstandingDesktop {
+        display: block;
+    }
+    .outstandingMobile {
+        display: none;
+    }
+
+ } */
+

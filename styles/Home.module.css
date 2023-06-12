@@ -226,43 +226,6 @@
 
 /* new styles */
 
-/* .nav {
-  align-items: center;
-  display: flex;
-  height: 70px;
-  justify-content: space-between;
-  padding: 12px 24px;
-  position: fixed;
-  width: 100%; 
-  z-index: 999;
-} */
-
-/* .navBrand {
-  color: #0CA1CD; 
-  font-size: 2rem;
-}
-
-.navBackground {
-  background-color: rgba(0, 0, 0, 0.7);
-  transition: background-color 0.5s ease;
-} */
-
-/* .navLinks {
-  display: flex;
-  gap: 32px;
-} */
-
-/* .navLinks a {
-  font-size: 1.5rem;
-  color: white !important;
-}
-
-.navLinks a:hover {
-  color: #0CA1CD !important;
-  cursor: pointer;
-  transition: color 0.5s ease-in-out;
-} */
-
 .section {
   background-color: rgba(0, 0, 0, 0.5);
   color: black;
