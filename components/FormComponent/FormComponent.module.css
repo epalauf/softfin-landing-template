@@ -1,27 +1,23 @@
-.introCol {
-    max-width: 50%;
+.formContainer {
     display: flex;
-    flex-direction: column;
-    gap: 24px;
+    justify-content: space-around;
+    padding: 32px;
+
 }
 
-.introContainer {
-    align-items: center;
-    display: flex;
-    justify-content: flex-end;
-    padding: 24px 64px;
-    height: 25rem;
-}
-     
-
-.introCol h1 {
-    font-size: 3rem;   
-    color: olivedrab;
-    text-align: right;
+.formDescription svg {
+    color: #0CA1CD;
+    font-size: 3rem;
 }
 
-.introCol p {  
+.formLabel {
+    color: #0CA1CD;
+}
+
+.formDescription p {
     color: white;
-    line-height: 24px;
-    
+}
+
+.formDescription, .formFields {
+    width: 45%;
 }

@@ -1,0 +1,56 @@
+.blogContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    max-height: 45rem;
+    overflow-y: scroll;
+}
+
+.blogColumns {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 32px;
+    width: 100%;
+}
+
+.blogDateColumn { 
+    display: flex;
+    color: white; 
+    justify-content: flex-end;
+}
+
+
+
+.blogVerticalLine {        
+    border-left: 6px solid #0CA1CD;
+    height: 100%;
+}
+
+.blogIconColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.blogIcon {
+    border-radius: 50%;
+    background-color: #0CA1CD;
+    padding: 12px;
+}
+
+.blogIcon svg {
+    color: white;
+    font-size: 1.3rem;
+}
+
+.blogDateColumn,
+.card {
+    width: 45%;
+}
+
+.blogIconColumn {
+    width: 10%;
+}

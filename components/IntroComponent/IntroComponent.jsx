@@ -1,12 +1,10 @@
 import React from "react";
-import { Link } from 'react-scroll'
-
 
 
 import styles from './IntroComponent.module.css'
 
 export default function IntroComponent(props) {
-    const { handleFormSection } = props
+    const { handleNavSection } = props
     return (
         <div className={`${styles.introContainer}`}>
             <div className={`${styles.introCol}`}>
@@ -17,7 +15,7 @@ export default function IntroComponent(props) {
                     Suspendisse eu neque ante. Phasellus viverra egestas ligula, 
                     vel vestibulum tellus finibus nec. 
                 </p>
-                <button type="button" className="btn btn-primary"  onClick={() => {handleFormSection('form')}}>Get a demo</button >
+                <button type="button" className="btn btn-primary"  onClick={() => {handleNavSection('form')}}>Get a demo</button >
             </div>
         </div>
     )

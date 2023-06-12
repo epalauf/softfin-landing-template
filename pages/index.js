@@ -3,19 +3,19 @@ import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import { Link, scroller } from 'react-scroll'
-//import Image from 'next/image'
+import Image from 'next/image'
 
+import NavBarComponent from '@/components/NavBarComponent/NavBarComponent'
 import IntroComponent from '@/components/IntroComponent/IntroComponent'
 import OutstandingComponent from '@/components/OutstandingComponent/OutstandingComponent'
 import FormComponent from '@/components/FormComponent/FormComponent'
+//import GalleryComponent from '@/components/GalleryComponent/GalleryComponent'
+import FooterComponent from '@/components/FooterComponent/FooterComponent'
+import BlogComponent from '@/components/BlogComponent/BlogComponent'
 
-const inter = Inter({ subsets: ['latin'] })
-
-
-
+const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
-
   const [scrollPosition, setScrollPosition] = React.useState(0);
   React.useEffect(() => {
     const handleScroll = () => {
@@ -29,6 +29,16 @@ export default function Home() {
     };
   }, []);
 
+  const handleNavSection = (navLink) => {
+    scroller.scrollTo(`${navLink}`, {
+      duration: 900,
+      delay: 0,
+      smooth: "easeInOutQuart",
+      offset: -70
+    });
+
+  }
+
   return (
     <>
       <Head>
@@ -38,67 +48,63 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <nav className={`${styles.nav} ${inter.className} ${scrollPosition >= 70 ? styles.navBackground : ''}`}>
+      <NavBarComponent handleNavSection={ (navLink) => { handleNavSection(navLink) }} />
+
+      {/* <nav className={`${styles.nav} ${inter.className} ${scrollPosition >= 70 ? styles.navBackground : ''}`}>
         <h1 className={`${styles.navBrand} `}>Softfin</h1>
-        {/* <Image
+        <Image
           src="/logo.png"
           width={200}
           height={58}
           
           alt="Picture of the author"
-        /> */}
+        />
         <div className={`${styles.navLinks}`}>
           <Link to='intro' smooth={true} duration={700} offset={-70} >Home</Link>
           <Link to='info' smooth={true} duration={700} offset={-70} >About</Link>
           <Link to='categories' smooth={true} duration={700} offset={-70} >Store</Link>
           <Link to='gallery' smooth={true} duration={700} offset={-70} >Gallery</Link>
           <Link to='form' smooth={true} duration={700} offset={-70} >Contact</Link>
-         {/*  <a href='#'>Control panel</a> */}
+         
          
         </div>
-      </nav>
+      </nav> */}
    
       <main className={`${styles.main} ${inter.className}`}>
         <section id='intro' className={`${styles.intro} ${inter.className}`}>
-          <IntroComponent 
-           handleFormSection={(link) => {
-            scroller.scrollTo(`${link}`, {
-              duration: 900,
-              delay: 0,
-              smooth: "easeInOutQuart",
-              offset: -70
-            });
-           }}
-          />
+          <IntroComponent handleNavSection={ (navLink) => { handleNavSection(navLink) }} />
         </section>
-        <section id='outstanding' className={`${styles.section} ${inter.className}`}>
-          
-          
-           <OutstandingComponent />
+        {/* <section id='outstanding' className={`${styles.section} ${inter.className}`}>
+           
         </section>
         <section id='description' className={`${styles.section} ${inter.className}`}>
           Description Content
-        </section>
+        </section> */}
         <section id='info' className={`${styles.introContent} ${styles.section} ${inter.className}`}>
-          General Info Content
+          <OutstandingComponent />
         </section>
-        <section id='categories' className={`${styles.section} ${inter.className}`}>
+        {/* <section id='categories' className={`${styles.section} ${inter.className}`}>
           Product Categories Content
-        </section>
-        <section id='gallery' className={`${styles.section} ${inter.className}`}>
-          Gallery Content
+        </section> */}
+        {/* <section id='gallery' className={`${styles.section} ${inter.className}`}>
+          <GalleryComponent />
+        </section> */}
+        <section id='blog' name='blog' className={`${styles.section} ${inter.className}`}>
+          <BlogComponent />
         </section>
         <section id='form' name='form' className={`${styles.section} ${inter.className}`}>
           <FormComponent />
         </section>
-        <footer className={`${styles.section} ${inter.className}`}>
-          Footer
-          <br/>
+        {/* <section className={`${styles.section} ${inter.className}`}>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d127443.10247215783!2d-76.78120886329393!3d3.4477545268755883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1686326733897!5m2!1ses!2sco" width="100%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section> */}
+        <section className={`${styles.section} ${inter.className}`}>
+
+          <FooterComponent />
           
-          Image by <a href="https://www.freepik.com/free-photo/variety-dark-shapes-background_9464829.htm#query=background&position=8&from_view=search&track=robertav1_2_sidr">Freepik</a>
-          Image by <a href="https://www.freepik.com/free-photo/wavy-copy-space-background-close-up_9465188.htm#query=background&position=22&from_view=search&track=robertav1_2_sidr">Freepik</a>
-          Image by <a href="https://www.freepik.com/free-photo/layers-black-torn-paper_11068923.htm#page=2&query=background&position=30&from_view=search&track=robertav1_2_sidr">Freepik</a>
-        </footer>
+          
+          
+        </section>
       </main>
     </>
   )

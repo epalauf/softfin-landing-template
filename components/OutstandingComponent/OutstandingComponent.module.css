@@ -1,0 +1,34 @@
+.carouselItemContainer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.carouselDescription {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+    color: white;
+    text-align: left;
+    gap: 24px;
+    text-align: center;
+}
+
+.carouselDescription b {
+    color: #0CA1CD;
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+.carouselDescription svg{
+    font-size:3rem;
+}
+
+.carouselInner {
+    padding: 12px 80px;
+}
+
+.carouselControlNext, .carouselControlPrev {
+    width: 5%;
+}
+

@@ -1,0 +1,22 @@
+.masonryGallery {
+    column-count: 3; /* Adjust the number of columns as desired */
+    column-gap: 10px; /* Adjust the gap between columns as desired */
+  }
+  
+  .item {
+    display: inline-block;
+    width: 100%; /* Set the width of items based on the number of columns */
+    margin-bottom: 10px; /* Adjust the margin between items as desired */
+  }
+  
+  .item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .galleryContainer {
+    max-height: 25rem;
+    overflow-y: scroll;
+
+  }
+  
