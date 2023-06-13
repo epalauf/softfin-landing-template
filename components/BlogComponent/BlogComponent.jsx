@@ -23,7 +23,6 @@ export default function BlogComponent(props) {
                 <div className={`${styles.blogColumns}`} key={index}>
                     <div className={`${styles.blogDateColumn}`}>
                         <div>{moment(date.entry_date).format("dddd, MMMM D YYYY")}</div> 
-                                               
                     </div>
                     <div className={`${styles.blogIconColumn}`}>
                         <div className={`${styles.blogIcon}`}><BsFillFileTextFill /></div>

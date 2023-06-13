@@ -11,7 +11,7 @@ export default function NavBarComponent(props) {
     return (
         <nav className={`navbar navbar-expand-lg fixed-top ${styles.navbar}`} data-bs-theme="dark">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#"><Image src="/logo.png" width={200} height={58} alt="Picture of the author"/></a>
+                <a className="navbar-brand" href="#"><Image src="/brand.png" width={200} height={58} alt="Picture of the author"/></a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
