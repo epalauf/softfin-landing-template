@@ -2,8 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
-import { Link, scroller } from 'react-scroll'
-import Image from 'next/image'
+import { scroller } from 'react-scroll'
 
 import NavBarComponent from '@/components/NavBarComponent/NavBarComponent'
 import IntroComponent from '@/components/IntroComponent/IntroComponent'
@@ -16,19 +15,6 @@ import BlogComponent from '@/components/BlogComponent/BlogComponent'
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
-  const [scrollPosition, setScrollPosition] = React.useState(0);
-  React.useEffect(() => {
-    const handleScroll = () => {
-      const currentPosition = window.scrollY;
-      setScrollPosition(currentPosition);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   const handleNavSection = (navLink) => {
     scroller.scrollTo(`${navLink}`, {
       duration: 900,
@@ -49,27 +35,7 @@ export default function Home() {
       </Head>
 
       <NavBarComponent handleNavSection={ (navLink) => { handleNavSection(navLink) }} />
-
-      {/* <nav className={`${styles.nav} ${inter.className} ${scrollPosition >= 70 ? styles.navBackground : ''}`}>
-        <h1 className={`${styles.navBrand} `}>Softfin</h1>
-        <Image
-          src="/logo.png"
-          width={200}
-          height={58}
-          
-          alt="Picture of the author"
-        />
-        <div className={`${styles.navLinks}`}>
-          <Link to='intro' smooth={true} duration={700} offset={-70} >Home</Link>
-          <Link to='info' smooth={true} duration={700} offset={-70} >About</Link>
-          <Link to='categories' smooth={true} duration={700} offset={-70} >Store</Link>
-          <Link to='gallery' smooth={true} duration={700} offset={-70} >Gallery</Link>
-          <Link to='form' smooth={true} duration={700} offset={-70} >Contact</Link>
-         
-         
-        </div>
-      </nav> */}
-   
+  
       <main className={`${styles.main} ${inter.className}`}>
         <section id='intro' className={`${styles.intro} ${inter.className}`}>
           <IntroComponent handleNavSection={ (navLink) => { handleNavSection(navLink) }} />
@@ -99,11 +65,7 @@ export default function Home() {
           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d127443.10247215783!2d-76.78120886329393!3d3.4477545268755883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1686326733897!5m2!1ses!2sco" width="100%" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section> */}
         <section className={`${styles.section} ${inter.className}`}>
-
           <FooterComponent />
-          
-          
-          
         </section>
       </main>
     </>

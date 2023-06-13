@@ -1,5 +1,7 @@
 import React from "react";
 
+import Image from 'next/image'
+
 
 import styles from './NavBarComponent.module.css'
 
@@ -9,7 +11,7 @@ export default function NavBarComponent(props) {
     return (
         <nav className={`navbar navbar-expand-lg fixed-top ${styles.navbar}`} data-bs-theme="dark">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#">Navbar</a>
+                <a className="navbar-brand" href="#"><Image src="/logo.png" width={200} height={58} alt="Picture of the author"/></a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -26,12 +28,12 @@ export default function NavBarComponent(props) {
                             <li className="nav-item">
                                 <a className="nav-link" href="#" data-bs-dismiss="offcanvas" onClick={() => {handleNavSection('info')}}>About</a>
                             </li>   
-                            <li className="nav-item">
+                            {/* <li className="nav-item">
                                 <a className="nav-link" href="#" data-bs-dismiss="offcanvas" onClick={() => {handleNavSection('categories')}}>Store</a>
-                            </li>
-                            <li className="nav-item">
+                            </li> */}
+                            {/* <li className="nav-item">
                                 <a className="nav-link" href="#" data-bs-dismiss="offcanvas" onClick={() => {handleNavSection('gallery')}}>Gallery</a>
-                            </li>
+                            </li> */}
                             <li className="nav-item">
                                 <a className="nav-link" href="#" data-bs-dismiss="offcanvas" onClick={() => {handleNavSection('blog')}}>Blog</a>
                             </li>
