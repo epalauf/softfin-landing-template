@@ -37,7 +37,7 @@ export default function Home() {
       <NavBarComponent handleNavSection={ (navLink) => { handleNavSection(navLink) }} />
   
       <main className={`${styles.main} ${inter.className}`}>
-        <section id='intro' className={`${styles.intro} ${inter.className}`}>
+        <section id='intro' className={`${inter.className}`}>
           <IntroComponent handleNavSection={ (navLink) => { handleNavSection(navLink) }} />
         </section>
         {/* <section id='outstanding' className={`${styles.section} ${inter.className}`}>
@@ -46,7 +46,7 @@ export default function Home() {
         <section id='description' className={`${styles.section} ${inter.className}`}>
           Description Content
         </section> */}
-        <section id='info' className={`${styles.introContent} ${styles.section} ${inter.className}`}>
+        <section id='info' className={`${styles.section} ${inter.className}`}>
           <OutstandingComponent />
         </section>
         {/* <section id='categories' className={`${styles.section} ${inter.className}`}>

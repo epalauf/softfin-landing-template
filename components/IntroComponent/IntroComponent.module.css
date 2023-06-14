@@ -10,7 +10,6 @@
     display: flex;
     justify-content: flex-end;
     padding: 24px 64px;
-    height: 25rem;
 }
      
 
@@ -35,8 +34,6 @@
         display: flex;
         justify-content: center;
         padding: 0;
-        margin: 70px 0;
-
     }
 
     .introCol h1 {
