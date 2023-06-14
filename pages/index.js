@@ -20,7 +20,7 @@ export default function Home() {
       duration: 900,
       delay: 0,
       smooth: "easeInOutQuart",
-      offset: -70
+      offset: -125
     });
 
   }
